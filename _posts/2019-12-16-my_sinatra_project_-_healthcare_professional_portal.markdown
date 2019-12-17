@@ -34,12 +34,12 @@ So here's where the **MVC** file structure comes into play. MVC, which means Mod
 |   NAME   |     PATH       |   HTTP VERB     |            PURPOSE                   |
 |----------|----------------|-----------------|--------------------------------------| 
 | Index    | /patients        |      GET        | Displays all patients              |
-| New      | /patients/new      |      GET        | Shows new form for new blog entry    |
-| Create   | /patients         |      POST       | Creates a new blog post              |
-| Show     | /patients/:id      |      GET        | Shows one specified blog post        |
-| Edit     | /patients/:id/edit |      GET        | Shows edit form for one blog post    |
-| Update   | /patients/:id      |      PATCH        | Updates a particular blog post       |
-| Delete  | /patients/:id      |      DELETE     | Deletes a particular blog post       |
+| New      | /patients/new      |      GET        | Shows new form for new patient entry    |
+| Create   | /patients         |      POST       | Creates a patient with their detailed information             |
+| Show     | /patients/:id      |      GET        | Shows one specified patient information page        |
+| Edit     | /patients/:id/edit |      GET        | Shows edit form for for a particular patient to edit the patient's information    |
+| Update   | /patients/:id      |      PATCH        | Updates a particular patient's information       |
+| Delete  | /patients/:id      |      DELETE     | Deletes a particular patient       |
 
  
  
