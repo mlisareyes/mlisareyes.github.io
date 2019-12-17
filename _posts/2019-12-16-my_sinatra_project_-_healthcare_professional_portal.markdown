@@ -29,15 +29,17 @@ So here's where the **MVC** file structure comes into play. MVC, which means Mod
 * **Views** contains code that will be displayed in the browser. In my case, it was being able to see the home page, sign up page, user home page, an index of all the patients created by the user, and the patients' detailed information.
 * **Controllers** contains the HTTP verbs used for the models and views files to interact with each other.
 
+**Below shows a table of the CRUD actions and HTTP verbs being put to use:**
+
 |   NAME   |     PATH       |   HTTP VERB     |            PURPOSE                   |
 |----------|----------------|-----------------|--------------------------------------| 
-| Index    | /blog          |      GET        | Displays all blog post               |
-| New      | /blog/new      |      GET        | Shows new form for new blog entry    |
-| Create   | /blog          |      POST       | Creates a new blog post              |
-| Show     | /blog/:id      |      GET        | Shows one specified blog post        |
-| Edit     | /blog/:id/edit |      GET        | Shows edit form for one blog post    |
-| Update   | /blog/:id      |      PUT        | Updates a particular blog post       |
-| Destroy  | /blog/:id      |      DELETE     | Deletes a particular blog post       |
+| Index    | /patients        |      GET        | Displays all patients              |
+| New      | /patients/new      |      GET        | Shows new form for new blog entry    |
+| Create   | /patients         |      POST       | Creates a new blog post              |
+| Show     | /patients/:id      |      GET        | Shows one specified blog post        |
+| Edit     | /patients/:id/edit |      GET        | Shows edit form for one blog post    |
+| Update   | /patients/:id      |      PATCH        | Updates a particular blog post       |
+| Delete  | /patients/:id      |      DELETE     | Deletes a particular blog post       |
 
  
  
