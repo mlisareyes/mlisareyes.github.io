@@ -29,6 +29,13 @@ So here's where the **MVC** file structure comes into play. MVC, which means Mod
 * **Views** contains the HTML code that will display content in the browser. In my case, it was being able to see the home page, sign up page, user home page, an index of all the patients created by the user, and the patients' detailed information.
 * **Controllers** contains the HTTP verbs used for the models and views files to interact with each other.
 
+Now that we understand the MVC structure, how does a *client*, or a personal computer/person, interact with the server that contains all the data in the MVC? **RESTful Routes**
+
+**REST** refers to representational state transfer, which provides a way mapping between HTTP verbs (get, post, patch, delete) to controller CRUD actions (create, read, update, delete). 
+
+When a client navigates through a website and clicks on different links, they are making a *state transition* which would bring them to a different web page, or in other words, *the next state of application*. This is an example of following the REST principles. It's just a pattern to follow when an HTTP request is made by the client. 
+
+
 **Below shows a table of the CRUD actions and HTTP verbs being put to use:**
 
 |   NAME   |     PATH       |   HTTP VERB     |            PURPOSE                   |
@@ -47,7 +54,9 @@ So here's where the **MVC** file structure comes into play. MVC, which means Mod
 * **POST** requests are made by the client to submit data into your web server's database to record new data.
 * **PATCH** requests are made by the client who submitted data and wants to edit or update that data.
 * **DELETE** requests are made by a client when they want to remove submitted/recorded data from the database.
-* 
+
+
+
 
  
  
