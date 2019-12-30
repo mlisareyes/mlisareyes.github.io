@@ -25,8 +25,8 @@ After I had finished my initial CLI project from a couple months ago, I was able
 
 So here's where the **MVC** file structure comes into play. MVC, which means Models, Views, and Controllers, are used to separate each different functionality of the code. 
 
-* **Models** represent the object/data that is being created. In my case, my model objects were *Users* and *Patients*. 
-* **Views** contains code that will be displayed in the browser. In my case, it was being able to see the home page, sign up page, user home page, an index of all the patients created by the user, and the patients' detailed information.
+* **Models** are Ruby classes that represent the object/data that is being created. In my case, my model objects were *Users* and *Patients*. 
+* **Views** contains the HTML code that will display content in the browser. In my case, it was being able to see the home page, sign up page, user home page, an index of all the patients created by the user, and the patients' detailed information.
 * **Controllers** contains the HTTP verbs used for the models and views files to interact with each other.
 
 **Below shows a table of the CRUD actions and HTTP verbs being put to use:**
