@@ -41,6 +41,14 @@ So here's where the **MVC** file structure comes into play. MVC, which means Mod
 | Update   | /patients/:id      |      PATCH        | Updates a particular patient's information       |
 | Delete  | /patients/:id      |      DELETE     | Deletes a particular patient       |
 
+
+**HTTP Verbs**
+* **GET** requests are requests made by an *client*, or an individual viewing a web browser, to view HTML code that displays content.
+* **POST** requests are made by the client to submit data into your web server's database to record new data.
+* **PATCH** requests are made by the client who submitted data and wants to edit or update that data.
+* **DELETE** requests are made by a client when they want to remove submitted/recorded data from the database.
+* 
+
  
  
 
