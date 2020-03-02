@@ -28,9 +28,28 @@ Here’s how I made sense of the chaos in my brain:
 * I found out that this was not necessary. I had another object model, Notes, but after debate, it made sense that a user should only make a note on a patient if there’s an appointment with them.
 
 **4. How do you delete an object when there’s a foreign key?** 
-`*	Dependent: :Destroy`
+* `Dependent: :Destroy`
 
 I ran into an error when a user could not delete their own patient because the user was not directly assoctiated with the patients, it was through appointments. Adding that one line solved the problem. 
+*#add code here*
+
+Getting technical here, what exactly are associations?
+It is the connection between two models.
+
+**Relationship Types:**
+* One-to-one
+* One-to-many
+* Many-to-many
+
+**One-to-one**
+* Example: One person can have one social security number
+
+**One-to-many**
+* Example: One customer can have many orders; many orders belong to one customer.
+
+**Many-to-many**
+* Example: Doctors can have many patients; patients can have many doctors. 
+
 
 
 
