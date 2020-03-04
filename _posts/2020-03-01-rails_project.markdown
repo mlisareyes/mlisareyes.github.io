@@ -49,11 +49,18 @@ It is the connection between two models.
 **One-to-one**
 * Example: One person can have one social security number
 
+![](https://support.airtable.com/hc/en-us/article_attachments/206766488/Screen_Shot_2016-04-26_at_3.00.06_PM.png)
+
 **One-to-many**
-* Example: One customer can have many orders; many orders belong to one customer.
+* Example: One customer can have many orders; an order belongs to a customer.
+
+![](https://guides.rubyonrails.org/v3.2/images/has_many.png)
+![](https://guides.rubyonrails.org/v3.2/images/belongs_to.png)
 
 **Many-to-many**
-* Example: Doctors can have many patients; patients can have many doctors. 
+* Example: Similar to my project, doctors can have many patients; patients can have many doctors. 
+
+![](https://i.stack.imgur.com/qaWFh.png)
 
 
 
