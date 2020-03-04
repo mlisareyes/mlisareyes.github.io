@@ -6,10 +6,6 @@ permalink:  rails_project
 ---
 
 
-This is a test. There is no content yet. Content will be added later on. 
-
-Under Construction.
-
 Object associations are one of those topics that I felt seemed simple enough to understand, but hard when putting it into code. It took me some time before I started my Rails project because I was trying to wrap my head around what exactly associations are. This led me to overthink how I need to implement it into my app for it to function well. 
 
 Here’s how I made sense of the chaos in my brain:
@@ -31,7 +27,16 @@ Here’s how I made sense of the chaos in my brain:
 * `Dependent: :Destroy`
 
 I ran into an error when a user could not delete their own patient because the user was not directly assoctiated with the patients, it was through appointments. Adding that one line solved the problem. 
-*#add code here*
+
+
+```
+class Patient < ApplicationRecord
+  has_many :appointments, dependent: :destroy
+  has_many :users, through: :appointments
+  has_many :notes
+end
+```
+
 
 Getting technical here, what exactly are associations?
 It is the connection between two models.
