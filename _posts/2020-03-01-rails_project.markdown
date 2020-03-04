@@ -20,11 +20,11 @@ Here’s how I made sense of the chaos in my brain:
 **2. How will a User be connected to the Patient?**
 * Create a many-to-many relationship; a doctor can have many patients, and patients can have many doctors through appointments.  
 
-**3. Could another object model be used to connect a patient and a user? **
+**3. Could another object model be used to connect a patient and a user?**
 * I found out that this was not necessary. I had another object model, Notes, but after debate, it made sense that a user should only make a note on a patient if there’s an appointment with them.
 
 **4. How do you delete an object when there’s a foreign key?** 
-* `Dependent: :Destroy`
+* `dependent: :destroy`
 
 I ran into an error when a user could not delete their own patient because the user was not directly assoctiated with the patients, it was through appointments. Adding that one line solved the problem. 
 
