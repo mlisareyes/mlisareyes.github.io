@@ -5,22 +5,65 @@ date:       2020-07-28 19:35:34 -0400
 permalink:  javascript_project
 ---
 
+**Asynchronous vs. Synchronous Programming**
 
-TOPIC: AJAX
+Asynchronous programming is a challenging topic, especially for new web developers first learning it. What always helps me to understand a topic is to make sure that I am able to explain it simply. In order to explain what asynchronous programming is, first let me explain to you what it is not, which is synchronous programming.
 
-It's hard to explain something that you don't quite understand, even if you read 20 different definitions of it. That's the issue I came across when trying to understand AJAX, or Asynchronous Javascript and XML. In theory, it made sense, but implementing it was a whole different thing. I didn't quite understand it until I ran into an issue with my code where I had to implement it.
+Synchronous programming will run your code in the order that it was invoked, in sequential order. It will have to wait for one task to complete in order to move onto the next one. 
 
-The simplest way I can explain AJAX is that it's a set of development techniques that can be used in JavaScript to update a web application without reloading or refreshing a the web page bring you to a different URL. In other words, data is being loaded asynchronously, which means that not only can you update a web page without reloading it, you are also requesting and receiving data from a server after the page initially loaded. A user will be able to continue using the web page while information is being requested from the server in the background. However, instead of using XML, I used JSON to pass the AJAX updates between the client and server. 
+Take a look at the code below:
 
-**My goal:**
-I wanted to be able to click on an employee name within the recognition feed section of my web app, which would load information onto the web page without loading a new page to show all of the recognitions given to that employee. Basically, I wanted to fetch all the employee data from the server so that it would show up on the page. 
+```
+function endFunc() {
+  console.log('End')
+};
 
-**Issues I ran into:**
-Being unable to grab the <h3> element from the HTML document for each employee.
+function startFunc() {
+  console.log('Start')
+};
 
-Being able to fetch the employee data after the click event is implemented, so that all the associated recognitions are rendered onto the page
+function otherFunc() {
+  console.log('this statement is in between the start and end')
+};
 
-**Solutions:**
-I suddenly realized that I had to loop through the array of employee ids/names to grab each h3 element, not just one.
+startFunc();
+otherFunc();
+endFunc();
+```
 
-I needed to make sure that the app would first make a request to the server to grab all the recognitions, then it would render onto the web page. After that information is rendered, then a click event could occur, which would then initiate a request to the server for the employee data which contains all of its associated recognitions.
+I first declared three sets of functions, and then invoked each function in a specific order. Take a look at the result:
+```
+Start
+this statement is in between the start and end
+End
+```
+
+The functions called above printed to the console in the order in which it was invoked.
+
+
+On the other hand, in asynchronous programming, JavaScript will allow you to execute other tasks while awaiting completion of another task. Simply put, you don’t have to wait for one request to complete before moving onto the next request.
+
+Take a look at the code below:
+```
+console.log('Start');
+
+setTimeout(() => {
+  console.log('We are in the timeout');
+}, 5000);
+
+console.log('End')
+```
+
+The above code shows a console.log that will print out ‘start’
+
+Then a setTimeout function which takes in callback function that will run after at least 5 seconds.
+
+Then, another console.log is invoked to print out ‘end’
+
+The result below shows that it didn’t print out in sequential order. What happened is that the console.log didn’t wait for the setTimeout function to finish running. It printed ‘End’ while the setTimeout function was running and waiting 5 seconds to print the statement. 
+
+```
+Start
+End
+We are in the timeout
+```
