@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "React: Props vs State"
-date:       2020-10-27 23:22:03 +0000
+date:       2020-10-27 19:22:04 -0400
 permalink:  react_props_vs_state
 ---
 
@@ -18,9 +18,9 @@ In other words, components contain pieces of code that can be used again that di
 There is a way to pass information to other components, and that’s through the use of props. Props are uni-directional, which means you pass the data from parent to child only. You can pass the props value into your components, which can otherwise be described as attributes or properties of data. 
 
 **State**
-In contrast, state isn’t passed down from parent to child component. Instead, state is data that is directly initialized and managed by a class component. The way state is updated is through the use of the function .setState, which basically initializes (or sets up) and updates state within the component. 
+In contrast, state isn’t passed down from parent to child component. Instead, state is data that is directly initialized and managed by a class component. The way state is updated is through the use of the function `.setState,` which basically initializes (or sets up) and updates state within the component. 
 
 
 **The key differences:**
 1. Props are used to pass down data from a parent to child component, whereas state is used for managing data within a component (cannot be accessed outside its component)
-2. Props are immutable and should never be changed in a child component & state is mutable, with the ability to be mutated inside the component using the .setState() method. 
+2. Props are immutable and should never be changed in a child component & state is mutable, with the ability to be mutated inside the component using the `.setState()` method. 
