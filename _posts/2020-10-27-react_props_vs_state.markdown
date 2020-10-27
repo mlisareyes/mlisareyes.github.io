@@ -23,5 +23,5 @@ In contrast, state isn’t passed down from parent to child component. Instead, 
 
 
 **The key differences:**
-1. 1. Props are used to pass down data from a parent to child component, whereas state is used for managing data within a component (cannot be accessed outside its component)
+1. Props are used to pass down data from a parent to child component, whereas state is used for managing data within a component (cannot be accessed outside its component)
 2. Props are immutable and should never be changed in a child component & state is mutable, with the ability to be mutated inside the component using the `.setState()` method. 
