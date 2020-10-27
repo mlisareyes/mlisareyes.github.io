@@ -1,18 +1,23 @@
 ---
 layout: post
 title:      "React-Redux - Final Project"
-date:       2020-10-19 02:41:20 +0000
+date:       2020-10-18 22:41:21 -0400
 permalink:  react-redux_-_final_project
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae sodales enim. Fusce ullamcorper ante eget turpis rhoncus sagittis. Pellentesque at orci iaculis, lacinia dolor eget, vehicula tellus. Sed sagittis egestas porta. Praesent nec eleifend lectus, sed commodo sapien. Donec pretium, mi et mollis vestibulum, purus neque porta purus, nec aliquam dolor mi vitae dolor. Fusce nec nisi nec libero sagittis malesuada vitae eget enim. Nulla quis libero tincidunt, mattis dui eget, imperdiet nisi. Duis nec augue nec nibh eleifend pretium. Aliquam lobortis odio a tempor ultrices. Praesent vel odio at leo porta dapibus ac quis urna. Sed rutrum vitae ipsum quis rhoncus. Integer at posuere arcu, vel placerat tellus.
 
-Cras hendrerit sed mauris vel imperdiet. Nunc vel dui nec ipsum fermentum sodales nec ut lacus. Nulla facilisi. Fusce placerat mollis magna vel sollicitudin. Quisque nec ipsum nec purus imperdiet pulvinar id quis nisi. Vivamus egestas justo nec massa consequat, sit amet venenatis quam laoreet. Suspendisse ullamcorper justo ligula, sed efficitur arcu ullamcorper eu. Nulla at massa ut leo varius faucibus eget at tortor.
+I have finally made it to my last project of my Flatiron School journey where I was met with the task of creating a project that implemented React and Redux. This project has been the most difficult project during my journey at Flatiron, because this is the first project where I had to navigate the waters on my own, and didn’t really know where to go or even where to start. Although I’d like to talk about the various topics within React and Redux, for simplicity’s sake, I will explain redux-thunk.
 
-Donec sed pretium mauris, nec interdum purus. Curabitur venenatis dolor elit, a ultricies erat lacinia sit amet. Etiam ut tortor rutrum, congue sapien vitae, sagittis sem. Praesent sit amet tincidunt erat, ac interdum augue. Vivamus id purus et augue ornare tristique. Sed urna eros, dapibus vel augue at, suscipit eleifend dui. Pellentesque feugiat tempus tortor. Fusce volutpat vel leo quis feugiat. Maecenas luctus odio id tortor feugiat, non dictum purus rhoncus. Vivamus eleifend dolor eget libero tempor porta. Suspendisse nec odio nec massa varius rutrum. Donec non suscipit sem. Nunc accumsan tincidunt felis sed vehicula. Nam placerat sed elit eu suscipit. Nam sagittis venenatis molestie. Pellentesque sodales at lectus vitae faucibus.
+**What is Redux-Thunk?**
+Redux-thunk is a popular [middleware](https://redux.js.org/advanced/middleware) used in Redux to make asynchronous requests in Redux. The use of Redux-Thunk allows for delayed actions. To better understand this, the word “thunk” by itself is a programming technique used to delay a calculation or computation until its result is needed. 
 
-Curabitur pulvinar nunc erat, vel consectetur velit aliquet sit amet. In sed erat consectetur, sollicitudin mauris eu, scelerisque arcu. Nulla ornare felis facilisis molestie bibendum. Quisque et mauris luctus, cursus mi at, bibendum sapien. Morbi bibendum elit erat, pharetra auctor augue euismod id. Donec ac pulvinar enim. Proin nec lorem aliquam, euismod augue vitae, pretium urna.
+**Why Is Redux Thunk Useful?**
+Without the use of the Redux Thunk middleware, Redux will only be able to support synchronous data flow, where you would have to be mindful of when the action creators you are calling, where you would have to specify which ones run first. With Redux Thunk, action creators can dispatch the result of other action creators without needing to know whether they are synchronous or asynchronous. 
 
-Phasellus sit amet placerat tellus, nec blandit nibh. Etiam quis faucibus diam. Nunc vulputate ut nibh eget fringilla. Vestibulum elementum porta sagittis. Mauris faucibus dolor turpis. Fusce condimentum varius eros. Ut quis massa ac neque laoreet maximus. Mauris lobortis, odio id varius suscipit, metus lorem malesuada elit, vel dignissim augue tellus et diam. Sed cursus pulvinar massa sit amet condimentum. Nunc ut tincidunt tellus. In magna arcu, aliquet non tellus eget, vestibulum mollis velit.
+**What Does Redux Thunk Do?**
+1. It allows you to return a function inside of the action creator, whereas normally, it would return a plain JavaScript object. 
+2. This function then receives the store’s dispatch function as its argument, and then this allows you to dispatch multiple actions from that returned function. 
 
+Strangely, “actions” in Redux don’t actually do anything because they’re just plain JavaScript objects. Without the function within the action that you are able to use because of Redux Thunk, that action won’t actually do something. 
 
+Even after finishing the project, I still struggle with grasping various concepts with React and Redux, but the beauty of coding is that there’s always more to learn, and thus, master. In truth, I, like many other coders new to both React and Redux, still struggle with grasping Redux Thunk, so I open the floor to any critiques of this blog. If there’s anything I learned from Flatiron School, it’s that coding wasn’t meant to be learned alone, and that the only way I’ll learn to grasp this material more is to just keep coding! 
