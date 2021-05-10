@@ -53,7 +53,7 @@ def self.all
   end
 ```
 
-Pseudo-coding was key to figuring out the code for this one. I just needed to create an method that would return an array of all the dessert objects in the dessert class. And to do that, I would have to iterate through each dessert within my hash and create a new object.
+Pseudo-coding was key to figuring out the code for this one. I just needed to create a method that would return an array of all the dessert objects in the dessert class. And to do that, I would have to iterate through each dessert within my hash and create a new object.
 
 * Lastly was my control flow. I had started with three files within `lib/desserts` : **dessert.rb**, **scraper.rb**, and **cli.rb** I had figured out that if I just put in my scraper methods and dessert attributes within my dessert class, it would be easier to look at all the dessert objects being created and saved into an array. Conciseness was key. So, I removed **scraper.rb** and kept the other two files. 
 
