@@ -7,7 +7,7 @@ permalink:  french_desserts_cli
 
 The path to creating something great (or in this instance, just a working CLI) contains a lot of trial and error. While learning to code, you're often told that you'll hit bumps in the road. 
 
-![](https://personalexcellence.co/files/infographic-emotional-journey-of-creating-anything-great-850x468.png) 
+![](https://personalexcellence.co/files/infographic-emotional-journey-of-creating-anything-great.png) 
 
 This image has been presented to me a few times already during my coding journey, and since the beginning, I feel like I've been doing okay so far. You go through lessons and you're given a bunch of tests. Then, you solve the errors. Easy enough, right? I didn't want to experience that moment of panic just yet, because building a CLI meant that you weren't relying on a series of tests to check if you were correct. It was up to me to build working code and "testing" it by running the code to see if a user could enter an input and receive a specific output. 
 
