@@ -28,7 +28,7 @@ Next, was building the bare bones of the structure of my project. I entered `bun
 * I didn't have a control flow where I could easily operate between the files **dessert.rb**, **scraper.rb**, and **cli.rb**
 
 **Here's how I solved it:**
-* I figured out that the reason why I couldn't properly check tose  if my code would return the hash of scraped elements was because my `binding.pry` was still in the method `self.scrape_desserts` in  **dessert.rb**. I created a `self.test` method so that I could pop in a `binding.pry` inside that method and outside of the `self.scrape_desserts` method. I made sure that I placed `Desserts::Dessert.test` in the **cli.rb** file so that before the CLI actually ran, it would hit the binding.pry first. Once I ran `ruby bin/french-desserts`, I received this output:
+* I figured out that the reason why I couldn't properly check to see  if my code would return the hash of scraped elements was because my `binding.pry` was still in the method `self.scrape_desserts` in  **dessert.rb**. I created a `self.test` method so that I could pop in a `binding.pry` inside that method and outside of the `self.scrape_desserts` method. I made sure that I placed `Desserts::Dessert.test` in the **cli.rb** file so that before the CLI actually ran, it would hit the binding.pry first. Once I ran `ruby bin/french-desserts`, I received this output:
 
 ```
 [{:name=>"Chocolate-Filled Croissants (Pains au Chocolat)",
